@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scope Cars Arena</title>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+	<header>
+		<div class="navigation bar">
+			<a href="#" class="logo">Scope Cars Arena</a>
+			<a href="#new-cars"><button class="tablink">New Cars</button></a>
+			<a href="#hot-cars"><button class="tablink">Hot Cars</button></a>
+			<a href="#e-zone"><button class="tablink">Electric Zone</button></a>
+			<a href="{{ url_for('register') }}" target="_blank"><button class="tablink">Join Member</button></a>
+			<a href="{{ url_for('login') }}" target="_blank"><button class="tablink">Login</button></a>
+			<a href='https://www.facebook.com/scopecarsarena' target='_blank'><i class='bx bxl-facebook-circle' id=fb-btn></i></a>
+			<a href='https://www.instagram.com/scopecarsarena' target='_blank'><i class='bx bxl-instagram' id=ig-btn></i></a>
+			<i class='bx bx-cart' id=cart-icon></i>
+		</div>
+		<div class="cart">
+				<h2 class="cart-title">You have Selected</h2>
+				<div class="cart-content">
+					
+				</div>
+				<div class="total">
+					<div class="total-title">Total</div>
+					<div class="total-price">$0</div>
+				</div>
+				<button type="button" class="btn-buy">Rent Now</button>
+				<i class='bx bx-exit' id="close-cart"></i>
+			</div>
+		</div>
+	</header>
+
+	<section class="cars" id="new-cars">
+		<h2 class="section-title">New cars</h2>
+		<div class="car-list">
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/vw_tiguan.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Volkswagen Tiguan</h2>
+				<h2 class="car-year">Year: 2022</h2>
+				<h2 class="car-type">Type: SUV</h2>
+				<span class="price">$17500</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/audi_a3.jpeg') }}" alt="" class="car-img">
+				<h2 class="car-title">Audi A3 Sportback</h2>
+				<h2 class="car-year">Year: 2022</h2>
+				<h2 class="car-type">Type: Sportback</h2>
+				<span class="price">$15090</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/porsche_911.jpeg') }}" alt="" class="car-img">
+				<h2 class="car-title">Porsche 911 Carrera</h2>
+				<h2 class="car-year">Year: 2021</h2>
+				<h2 class="car-type">Type: Cabriolet</h2>
+				<span class="price">$28000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/bmw_x3.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">BMW X3</h2>
+				<h2 class="car-year">Year: 2021</h2>
+				<h2 class="car-type">Type: SUV</h2>
+				<span class="price">$18000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/Maserati-Ghibli-Hybrid-2021.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Maserati Ghibli Hybrid</h2>
+				<h2 class="car-year">Year: 2020</h2>
+				<h2 class="car-type">Type: Hybrid Saloon</h2>
+				<span class="price">$19000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/benz_cla250.jpeg') }}" alt="" class="car-img">
+				<h2 class="car-title">Mercedes Benz CLA250</h2>
+				<h2 class="car-year">Year: 2022</h2>
+				<h2 class="car-type">Type: Coupe</h2>
+				<span class="price">$15500</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/aventador.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Lamborghini Aventador LP780-4 Ultimae</h2>
+				<h2 class="car-year">Year: 2021</h2>
+				<h2 class="car-type">Type: Supercar</h2>
+				<span class="price">$32888</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/ferrari_roma.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Ferrari ROMA</h2>
+				<h2 class="car-year">Year: 2021</h2>
+				<h2 class="car-type">Type: Supercar</h2>
+				<span class="price">$31500</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="cars" id="hot-cars">
+		<h2 class="section-title">Hot cars</h2>
+		<div class="car-list">
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/ford_focus.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Ford Focus RS</h2>
+				<h2 class="car-year">Year: 2018</h2>
+				<h2 class="car-type">Type: Compact Car</h2>
+				<span class="price">$12500</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+					
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/vw_sharan.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Volkswagen Sharan</h2>
+				<h2 class="car-year">Year: 2019</h2>
+				<h2 class="car-type">Type: </h2>
+				<span class="price">$17000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/audi_rs6.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Audi RS6</h2>
+				<h2 class="car-year">Year: 2018</h2>
+				<h2 class="car-type">Type: Wagon</h2>
+				<span class="price">$22500</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/bmw_520i.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">BMW 520i</h2>
+				<h2 class="car-year">Year: 2018</h2>
+				<h2 class="car-type">Type: Luxury Saloon</h2>
+				<span class="price">$16800</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/gtr_r35.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Nissan GT-R</h2>
+				<h2 class="car-year">Year: 2017</h2>
+				<h2 class="car-type">Type: Japanese Supercar</h2>
+				<span class="price">$25999</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/honda_civic.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Honda Civic</h2>
+				<h2 class="car-year">Year: 2018</h2>
+				<h2 class="car-type">Type: Japanese Saloon</h2>
+				<span class="price">$11000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="cars" id="e-zone">
+		<h2 class="section-title">Electric Zone</h2>
+		<div class="car-list">
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/amg_eqs53.jpeg') }}" alt="" class="car-img">
+				<h2 class="car-title">Mercedes AMG EQS53 4Matic+</h2>
+				<h2 class="car-year">Year: 2022</h2>
+				<h2 class="car-type">Type: Luxury Saloon</h2>
+				<span class="price">$28800</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+					
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/taycan_gts.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Porsche Taycan GTS</h2>
+				<h2 class="car-year">Year: 2022</h2>
+				<h2 class="car-type">Type: Saloon</h2>
+				<span class="price">$28000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/tesla_3.jpeg') }}" alt="" class="car-img">
+				<h2 class="car-title">Tesla Model 3</h2>
+				<h2 class="car-year">Year: 2021</h2>
+				<h2 class="car-type">Type: Saloon</h2>
+				<span class="price">$26000</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+			<div class="car-box">
+				<img src="{{ url_for('static', filename='img/tesla_x.jpg') }}" alt="" class="car-img">
+				<h2 class="car-title">Tesla Model X</h2>
+				<h2 class="car-year">Year: 2021</h2>
+				<h2 class="car-type">Type: Luxury SUV</h2>
+				<span class="price">$27700</span>
+				<i class='bx bxs-share-alt share-btn' onClick="alert ('Link copied!')"></i>
+				<i class='bx bx-cart-add add-cart'></i>
+			</div>
+		</div>
+	</section>
+
+	<script src="{{ url_for('static', filename='js/app.js') }}" type="text/javascript"></script>
+</body>
+</html>
