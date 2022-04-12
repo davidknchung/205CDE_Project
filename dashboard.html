@@ -1,0 +1,13 @@
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+<h1>Dashboard</h1>
+<br>
+<p>Hi {{session.username}}, you are logged in our member account!</p>
+
+
+<a href="/logout"><input type="button" type="call_flask_function" value="Logout" onclick="loggedout()"></a>
+<script>
+function loggedout() {
+	alert("You are logged out.")
+}
+</script>
+<a href="{{ url_for('index') }}"><button>Go to home page</button></a>
